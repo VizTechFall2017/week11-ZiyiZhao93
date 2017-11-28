@@ -31,7 +31,7 @@ var svg3 = d3.select('#svg3')
 
 
 var albersProjection = d3.geoAlbers()
-    .scale(90000)//tell it how big the map should be
+    .scale(120000)//tell it how big the map should be
     .rotate( [71.057,0] )
     .center( [0, 42.313] ) //FIND CENTER POINT LAT/LONG VALUE OF MASSACHUSETTS
     .translate([(width/2), (height/2)]);  //set the center of the map to show up in the center of the screen
@@ -49,7 +49,7 @@ var scaleY = d3.scaleLinear().range([height3-2*marginTop3, 0]);
 
 
 queue()
-    .defer(d3.json, "./boston1.json")
+    .defer(d3.json, "./Boston_Neighborhoods.json")
     .defer(d3.json, "./subway.json")
     .defer(d3.csv, "./subway.csv")
     .await(function(err, mapData,lineData, populationData){
