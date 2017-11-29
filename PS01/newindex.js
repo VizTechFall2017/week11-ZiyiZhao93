@@ -264,8 +264,8 @@ queue()
                 d3.select(this).attr('r', 5).attr('fill', 'orange');
             });
         svg2.append('circle')
-            .attr('cx', 93)
-            .attr('cy', 250)
+            .attr('cx', 233)
+            .attr('cy', 340)
             .attr('r', 5)
             .attr('fill', 'orange')
             .on('mouseover', function (d) {
@@ -275,8 +275,8 @@ queue()
                 d3.select(this).attr('r', 5).attr('fill', 'orange');
             });
         svg2.append('circle')
-            .attr('cx', 89)
-            .attr('cy', 259)
+            .attr('cx', 226)
+            .attr('cy', 360)
             .attr('r', 5)
             .attr('fill', 'orange')
             .on('mouseover', function (d) {
