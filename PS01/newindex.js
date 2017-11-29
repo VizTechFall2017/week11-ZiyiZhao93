@@ -31,7 +31,7 @@ var svg3 = d3.select('#svg3')
 
 
 var albersProjection = d3.geoAlbers()
-    .scale(120000)//tell it how big the map should be
+    .scale(170000)//tell it how big the map should be
     .rotate( [71.057,0] )
     .center( [0, 42.313] ) //FIND CENTER POINT LAT/LONG VALUE OF MASSACHUSETTS
     .translate([(width/2), (height/2)]);  //set the center of the map to show up in the center of the screen
@@ -49,8 +49,8 @@ var scaleY = d3.scaleLinear().range([height3-2*marginTop3, 0]);
 
 
 queue()
-    .defer(d3.json, "./Boston_Neighborhoods.json")
-    .defer(d3.json, "./subway.json")
+    .defer(d3.json, "./Boston.json")
+    .defer(d3.json, "./Orange.json")
     .defer(d3.csv, "./subway.csv")
     .await(function(err, mapData,lineData, populationData){
 
@@ -73,14 +73,7 @@ queue()
             })
             .attr('stroke','black')
             .attr('stroke-width',.2)
-            .on('mouseover',function (d) {
-                d3.select(this).attr('fill','yellow');
-            })
-            .on('mouseout', function (d) {
-                d3.select(this).attr('fill', function (d) {
-                    return colorScale(cityLookup.get(d.properties.NAME));
-                })
-            });
+
 
         svg2.background = 'none';
 
@@ -325,17 +318,17 @@ queue()
 
         svg3.append('text')
             .text('Total')
-            .attr('transform','translate(160, 200)')
+            .attr('transform','translate(160, 170)')
             .attr('font-size', 15);
 
         svg3.append('text')
             .text('Male')
-            .attr('transform','translate(230, 200)')
+            .attr('transform','translate(230, 170)')
             .attr('font-size', 15);
 
         svg3.append('text')
             .text('Female')
-            .attr('transform','translate(290, 200)')
+            .attr('transform','translate(290, 170)')
             .attr('font-size', 15);
 
 

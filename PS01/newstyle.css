@@ -1,29 +1,38 @@
 body{
     background-color: lightgray;
 }
+.tital{
+    width: 750px;
+    height: 200px;
+    margin-left: -200px;
+    float: left;
+}
 p{
-    text-align: center;
     font-family: 'Raleway', sans-serif;
-    font-size: 40px;
+    font-size: 30px;
 }
 .svgBox{
-    height: 500px;
-    width: 450px;
+    height: 650px;
+    width: 600px;
     float: left;
-    margin-left: 100px;
+    margin-top: 30px;
 }
 .svgBox2{
     height: 500px;
     width: 300px;
     float: left;
-    margin-left: -447px;
+    margin-left: -595px;
+    margin-top: 30px;
 }
 .svgBox3{
     width: 55%;
     height: 300px;
     float: left;
+    margin-left: -50px;
+    margin-top: -150px;
 }
 input{
     margin-left: 280px;
     float: left;
+    margin-top: -27px;
 }
