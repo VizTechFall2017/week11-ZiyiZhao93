@@ -259,6 +259,7 @@ queue()
             .attr('fill', 'orange')
             .on('mouseover', function (d) {
                 d3.select(this).attr('r', 8).attr('fill', 'red');
+                
             })
             .on('mouseout', function (d) {
                 d3.select(this).attr('r', 5).attr('fill', 'orange');
