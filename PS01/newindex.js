@@ -31,7 +31,7 @@ var svg3 = d3.select('#svg3')
 
 
 var albersProjection = d3.geoAlbers()
-    .scale(170000)//tell it how big the map should be
+    .scale(150000)//tell it how big the map should be
     .rotate( [71.057,0] )
     .center( [0, 42.313] ) //FIND CENTER POINT LAT/LONG VALUE OF MASSACHUSETTS
     .translate([(width/2), (height/2)]);  //set the center of the map to show up in the center of the screen
@@ -88,7 +88,18 @@ queue()
             .attr('fill','none');
 
         svg2.append('circle')
-            .attr('cx', 135)
+            .attr('cx', 299)
+            .attr('cy', 25)
+            .attr('r', 5)
+            .attr('fill', 'orange')
+            .on('mouseover', function (d) {
+                d3.select(this).attr('r', 8).attr('fill', 'red');
+            })
+            .on('mouseout', function (d) {
+                d3.select(this).attr('r', 5).attr('fill', 'orange');
+            });
+        svg2.append('circle')
+            .attr('cx', 290)
             .attr('cy', 55)
             .attr('r', 5)
             .attr('fill', 'orange')
@@ -99,8 +110,8 @@ queue()
                 d3.select(this).attr('r', 5).attr('fill', 'orange');
             });
         svg2.append('circle')
-            .attr('cx', 128)
-            .attr('cy', 75)
+            .attr('cx', 286)
+            .attr('cy', 135)
             .attr('r', 5)
             .attr('fill', 'orange')
             .on('mouseover', function (d) {
@@ -110,8 +121,8 @@ queue()
                 d3.select(this).attr('r', 5).attr('fill', 'orange');
             });
         svg2.append('circle')
-            .attr('cx', 127)
-            .attr('cy', 115)
+            .attr('cx', 286.5)
+            .attr('cy', 154)
             .attr('r', 5)
             .attr('fill', 'orange')
             .on('mouseover', function (d) {
@@ -121,8 +132,8 @@ queue()
                 d3.select(this).attr('r', 5).attr('fill', 'orange');
             });
         svg2.append('circle')
-            .attr('cx', 127)
-            .attr('cy', 125)
+            .attr('cx', 287)
+            .attr('cy', 167)
             .attr('r', 5)
             .attr('fill', 'orange')
             .on('mouseover', function (d) {
@@ -132,73 +143,7 @@ queue()
                 d3.select(this).attr('r', 5).attr('fill', 'orange');
             });
         svg2.append('circle')
-            .attr('cx', 127)
-            .attr('cy', 137)
-            .attr('r', 5)
-            .attr('fill', 'orange')
-            .on('mouseover', function (d) {
-                d3.select(this).attr('r', 8).attr('fill', 'red');
-            })
-            .on('mouseout', function (d) {
-                d3.select(this).attr('r', 5).attr('fill', 'orange');
-            });
-        svg2.append('circle')
-            .attr('cx', 138)
-            .attr('cy', 156)
-            .attr('r', 5)
-            .attr('fill', 'orange')
-            .on('mouseover', function (d) {
-                d3.select(this).attr('r', 8).attr('fill', 'red');
-            })
-            .on('mouseout', function (d) {
-                d3.select(this).attr('r', 5).attr('fill', 'orange');
-            });
-        svg2.append('circle')
-            .attr('cx', 148)
-            .attr('cy', 170)
-            .attr('r', 5)
-            .attr('fill', 'orange')
-            .on('mouseover', function (d) {
-                d3.select(this).attr('r', 8).attr('fill', 'red');
-            })
-            .on('mouseout', function (d) {
-                d3.select(this).attr('r', 5).attr('fill', 'orange');
-            });
-        svg2.append('circle')
-            .attr('cx', 150)
-            .attr('cy', 175)
-            .attr('r', 5)
-            .attr('fill', 'orange')
-            .on('mouseover', function (d) {
-                d3.select(this).attr('r', 8).attr('fill', 'red');
-            })
-            .on('mouseout', function (d) {
-                d3.select(this).attr('r', 5).attr('fill', 'orange');
-            });
-        svg2.append('circle')
-            .attr('cx', 147)
-            .attr('cy', 181)
-            .attr('r', 5)
-            .attr('fill', 'orange')
-            .on('mouseover', function (d) {
-                d3.select(this).attr('r', 8).attr('fill', 'red');
-            })
-            .on('mouseout', function (d) {
-                d3.select(this).attr('r', 5).attr('fill', 'orange');
-            });
-        svg2.append('circle')
-            .attr('cx', 145)
-            .attr('cy', 185)
-            .attr('r', 5)
-            .attr('fill', 'orange')
-            .on('mouseover', function (d) {
-                d3.select(this).attr('r', 8).attr('fill', 'red');
-            })
-            .on('mouseout', function (d) {
-                d3.select(this).attr('r', 5).attr('fill', 'orange');
-            });
-        svg2.append('circle')
-            .attr('cx', 143)
+            .attr('cx', 300)
             .attr('cy', 190)
             .attr('r', 5)
             .attr('fill', 'orange')
@@ -209,8 +154,8 @@ queue()
                 d3.select(this).attr('r', 5).attr('fill', 'orange');
             });
         svg2.append('circle')
-            .attr('cx', 130)
-            .attr('cy', 195)
+            .attr('cx', 315)
+            .attr('cy', 206)
             .attr('r', 5)
             .attr('fill', 'orange')
             .on('mouseover', function (d) {
@@ -220,8 +165,8 @@ queue()
                 d3.select(this).attr('r', 5).attr('fill', 'orange');
             });
         svg2.append('circle')
-            .attr('cx', 120)
-            .attr('cy', 205)
+            .attr('cx', 323)
+            .attr('cy', 219)
             .attr('r', 5)
             .attr('fill', 'orange')
             .on('mouseover', function (d) {
@@ -231,8 +176,8 @@ queue()
                 d3.select(this).attr('r', 5).attr('fill', 'orange');
             });
         svg2.append('circle')
-            .attr('cx', 110)
-            .attr('cy', 215)
+            .attr('cx', 323)
+            .attr('cy', 230)
             .attr('r', 5)
             .attr('fill', 'orange')
             .on('mouseover', function (d) {
@@ -242,8 +187,8 @@ queue()
                 d3.select(this).attr('r', 5).attr('fill', 'orange');
             });
         svg2.append('circle')
-            .attr('cx', 104)
-            .attr('cy', 227)
+            .attr('cx', 319)
+            .attr('cy', 237)
             .attr('r', 5)
             .attr('fill', 'orange')
             .on('mouseover', function (d) {
@@ -253,8 +198,63 @@ queue()
                 d3.select(this).attr('r', 5).attr('fill', 'orange');
             });
         svg2.append('circle')
-            .attr('cx', 97)
-            .attr('cy', 238)
+            .attr('cx', 315)
+            .attr('cy', 245)
+            .attr('r', 5)
+            .attr('fill', 'orange')
+            .on('mouseover', function (d) {
+                d3.select(this).attr('r', 8).attr('fill', 'red');
+            })
+            .on('mouseout', function (d) {
+                d3.select(this).attr('r', 5).attr('fill', 'orange');
+            });
+        svg2.append('circle')
+            .attr('cx', 311)
+            .attr('cy', 254)
+            .attr('r', 5)
+            .attr('fill', 'orange')
+            .on('mouseover', function (d) {
+                d3.select(this).attr('r', 8).attr('fill', 'red');
+            })
+            .on('mouseout', function (d) {
+                d3.select(this).attr('r', 5).attr('fill', 'orange');
+            });
+        svg2.append('circle')
+            .attr('cx', 288)
+            .attr('cy', 260)
+            .attr('r', 5)
+            .attr('fill', 'orange')
+            .on('mouseover', function (d) {
+                d3.select(this).attr('r', 8).attr('fill', 'red');
+            })
+            .on('mouseout', function (d) {
+                d3.select(this).attr('r', 5).attr('fill', 'orange');
+            });
+        svg2.append('circle')
+            .attr('cx', 264)
+            .attr('cy', 287)
+            .attr('r', 5)
+            .attr('fill', 'orange')
+            .on('mouseover', function (d) {
+                d3.select(this).attr('r', 8).attr('fill', 'red');
+            })
+            .on('mouseout', function (d) {
+                d3.select(this).attr('r', 5).attr('fill', 'orange');
+            });
+        svg2.append('circle')
+            .attr('cx', 253)
+            .attr('cy', 300)
+            .attr('r', 5)
+            .attr('fill', 'orange')
+            .on('mouseover', function (d) {
+                d3.select(this).attr('r', 8).attr('fill', 'red');
+            })
+            .on('mouseout', function (d) {
+                d3.select(this).attr('r', 5).attr('fill', 'orange');
+            });
+        svg2.append('circle')
+            .attr('cx', 245)
+            .attr('cy', 316)
             .attr('r', 5)
             .attr('fill', 'orange')
             .on('mouseover', function (d) {
@@ -286,8 +286,8 @@ queue()
                 d3.select(this).attr('r', 5).attr('fill', 'orange');
             });
         svg2.append('circle')
-            .attr('cx', 85)
-            .attr('cy', 270)
+            .attr('cx', 215)
+            .attr('cy', 380)
             .attr('r', 5)
             .attr('fill', 'orange')
             .on('mouseover', function (d) {
@@ -318,17 +318,17 @@ queue()
 
         svg3.append('text')
             .text('Total')
-            .attr('transform','translate(160, 170)')
+            .attr('transform','translate(160, 150)')
             .attr('font-size', 15);
 
         svg3.append('text')
             .text('Male')
-            .attr('transform','translate(230, 170)')
+            .attr('transform','translate(230, 150)')
             .attr('font-size', 15);
 
         svg3.append('text')
             .text('Female')
-            .attr('transform','translate(290, 170)')
+            .attr('transform','translate(290, 150)')
             .attr('font-size', 15);
 
 
